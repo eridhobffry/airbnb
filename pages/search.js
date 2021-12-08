@@ -4,6 +4,7 @@ import Footer from "../components/Footer"
 import Header from "../components/Header"
 import InfoCard from "../components/InfoCard"
 import Head from 'next/head'
+import Map from "../components/Map"
 
 const search = ({ searchResults }) => {
     const router = useRouter()
@@ -39,6 +40,10 @@ const search = ({ searchResults }) => {
                     })
                 }
                 </div>
+            </section>
+
+            <section className='hidden md:inline-flex md:min-w-[600]'>
+                <Map searchResults={searchResults} />
             </section>
         </main>
         <Footer />
