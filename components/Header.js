@@ -49,7 +49,7 @@ const Header = ({placeholder}) => {
             </div>
             {/* MIDDLE SECTION */}
             <div className='flex items-center border-2 rounded-full py-2 md:shadow-sm'>
-                <input placeholder={placeholder || 'Start your search'} value={searchInput} onChange={(e) => setSearchInput(e.target.value)} type='text' className='flex-grow pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400' />
+                <input placeholder={placeholder || 'Start your search'} value={searchInput} onChange={(e) => setSearchInput(e.target.value)} type='text' className='flex-grow w-full pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400' />
                 <SearchIcon className='hidden md:inline-flex h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer md:mx-2' />
             </div>
             {/* RIGHT SECTION */}
@@ -65,7 +65,7 @@ const Header = ({placeholder}) => {
             </div>
         </div>
         {
-            searchInput && <div className='flex flex-col mx-auto col-span-3'>
+            searchInput && <div className='flex flex-col mx-auto col-span-3 w-full'>
                 <DateRangePicker
                     ranges={[selectionRange]}
                     minDate={new Date()}

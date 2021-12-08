@@ -3,11 +3,11 @@ import { StarIcon} from '@heroicons/react/solid'
 import { HeartIcon} from '@heroicons/react/outline'
 
 const InfoCard = ({ img, location, description, title, star, price, total }) => {
-    return <div className='flex px-2 py-7 pr-4 border-b cursor-pointer hover:opacity-80 hover:shadow-lg transform transition duration-200 ease-out first:border-t'>
+    return <div className='flex flex-col sm:flex-row px-2 py-7 pr-4 border-b cursor-pointer hover:opacity-80 hover:shadow-lg transform transition duration-200 ease-out first:border-t'>
         <div className='relative h-24 w-40 md:h-52 md:w-80 flex-shrink-0'>
             <Image src={img} layout='fill' objectFit='cover' className='rounded-2xl' />
         </div>
-        <div className='flex flex-col flex-grow pl-5'>
+        <div className='flex flex-col flex-grow sm:pl-5'>
             <div className='flex justify-between'>
                 <p>{location}</p>
                 <HeartIcon className='h-7 cursor-pointer' />
