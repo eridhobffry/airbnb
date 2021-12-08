@@ -3,6 +3,7 @@ import { useRouter } from "next/dist/client/router"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import InfoCard from "../components/InfoCard"
+import Head from 'next/head'
 
 const search = ({ searchResults }) => {
     const router = useRouter()
@@ -11,6 +12,10 @@ const search = ({ searchResults }) => {
     const formattedEndDate = format(new Date(endDate), "dd MM yy")
     const range = `${formattedStartDate} - ${formattedEndDate}`
     return <div>
+        <Head>
+            <title>Your search at {location} | {range} | {numberOfGuests} guests</title>
+            <link rel="icon" href="/favicon.ico" />
+        </Head>
         <Header placeholder={`${location} | ${range} | ${numberOfGuests} guests`} />
         <main className='flex'>
             <section className='flex-grow pt-6 px-14'>
